@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        h1 {text-align: center;}
+        .gallery {display: flex; justify-content: space-between;}
+        .pic {display: inline-block; width: 250px; height: 250px; background-size: cover;}
+        .pic1 {background-image: url(../assets/img/img1.jpg);}
+        .pic2 {background-image: url(../assets/img/img2.jpg);}
+        .pic3 {background-image: url(../assets/img/img3.jpg);}
+        img {width: 600px; height: 600px; position: absolute; top: 100px; left: 480px;}
+        #back {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); display: none; position: absolute; left: 0; top: 0;}
+        span {padding-right: 20px; color: white; font-size: 50px; float: right;}
+    </style>
+</head>
+<body>
+    <div id="back">
+        <span>×</span>
+    </div>
+
+    <h1>Gallery</h1>
+
+    <div class="gallery">
+        <div id="img1" class="pic pic1"></div>
+        <div id="img2" class="pic pic2"></div>
+        <div id="img3" class="pic pic3"></div>
+    </div>
+
+    <div id="pop"></div>
+
+    <script>
+        $(document).ready(() => {
+            $('.pic').click((e) => {
+                let img = $(e.target).attr('id');
+                $('#pop').html('<img src="../assets/img/' + img + '.jpg">')
+            });
+
+            $('.pic').click(() => {
+                $('#back').show();
+            })
+
+            $('span').click(() => {
+                $('#back').hide();
+                $('img').fadeOut();
+            })
+        })
+    </script>
+</body>
+</html>

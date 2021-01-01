@@ -1,0 +1,47 @@
+.accordion {
+  margin: 50px;
+}
+
+.accordion .title, .accordion .card {
+  padding: 20px 10px;
+  border: 1px solid black;
+  border-bottom: 0;
+  background: #3e3e3e;
+  color: white;
+  border-radius: 5px;
+}
+
+.accordion .title:last-of-type, .accordion .card:last-of-type {
+  border-bottom: 1px solid black;
+}
+
+.accordion .title a, .accordion .card a {
+  display: block;
+  color: white;
+  font-weight: bold;
+}
+
+.accordion .card {
+  border-top: 0;
+  font-size: 16px;
+  margin: 0;
+  background: white;
+  color: black;
+  border-radius: 0px;
+}
+
+.accordion .card:last-of-type {
+  border-top: 1px solid white;
+  position: relative;
+  top: -1px;
+}
+
+.accordion a {
+  text-decoration: none;
+}
+
+.accordion body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+/*# sourceMappingURL=accordion.css.map */

@@ -1,0 +1,35 @@
+p {
+    // display: none;
+}
+
+div {
+    margin-top: 30px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+}
+
+#box1 {
+    background: olivedrab;
+}
+
+#panel, #desc {
+    width: 50%;
+    text-align: center;
+    background: aqua;
+    border: solid 1px black;
+    padding: 5px;
+}
+
+#desc {
+    padding: 20px 5px;
+    display: none;
+}
+
+#box2 {
+    background: orange;
+    position: absolute;
+}

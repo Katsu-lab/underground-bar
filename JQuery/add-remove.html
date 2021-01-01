@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        div {width: 500px; height: 200px; background: greenyellow; border: 1px solid black; margin-top: 20px;}
+    </style>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <p>This is a second paragraph.</p>
+
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+    </ol>
+
+    <img src="../assets/img/nature.jpg" width="300px" height="300px">
+
+    <div>
+        <p class="filter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, labore numquam. Magnam ad iusto iure natus fuga dolor vitae porro?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, labore numquam. Magnam ad iusto iure natus fuga dolor vitae porro???</p>
+    </div>
+
+    <button id="btn1">Append Text</button>
+    <button id="btn2">Append List</button>
+
+    <button id="btn3">Prepend Text</button>
+    <button id="btn4">Prepend List</button>
+
+    <button id="btn5">Insert Before</button>
+    <button id="btn6">Insert After</button>
+
+    <button id="btn7">Remove</button>
+    <button id="btn8">Empty</button>
+
+    <script>
+        $(document).ready(() => {
+            $('#btn1').click(()=>{
+                $('p').append('<b>This is an added paragraph</b>');
+            })
+
+            $('#btn2').click(()=> {
+                $('ol').append('<li>Append List Item</li>');
+            })
+
+            $('#btn3').click(()=>{
+                $('p').prepend('<b>This is an added paragraph</b>');
+            })
+
+            $('#btn4').click(()=> {
+                $('ol').prepend('<li>Append List Item</li>');
+            })
+
+            $('#btn5').click(()=> {
+                $('img').before('<b>Before</b>');
+            })
+
+            $('#btn6').click(()=> {
+                $('img').after('<b>After</b>');
+            })
+
+            $('#btn7').click(()=> {
+                // $('div').remove();
+                $('p').remove('.filter');
+            })
+
+            $('#btn8').click(()=> {
+                $('div').empty();
+            })
+        })
+    </script>
+</body>
+</html>

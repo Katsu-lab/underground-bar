@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        div {display: inline-block; margin: auto;}
+        img {width: 100%;}
+        .right, .left {width: 50px; position: relative; top: 200px; text-align: center;}
+        .right {left: 400px;}
+        .picture {width: 400px; position: absolute;}
+        .slide {display: none;}
+        .active {display: block;}
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="left"><button id="prev"><</button></div>
+        <div class="picture">
+            <div class="slide active">
+                <img src="../assets/img/img1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../assets/img/img2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../assets/img/img3.jpg" alt="">
+            </div>
+        </div>
+        <div class="right"><button id="next">></button></div>
+    </div>
+
+    <script>
+        $(document).ready(() => {
+
+            $('#prev').click(() => {
+                const index = $('.slide').index($('.active'));
+                const slide = $('.active');
+
+                switch (index) {
+                    case 0:
+                        slide.removeClass('active');
+                        $('.slide:last').addClass('active');
+                        break;
+                    case 1:
+                        slide.removeClass('active');
+                        slide.prev().addClass('active');
+                        break;
+                    case 2:
+                        slide.removeClass('active');
+                        slide.prev().addClass('active');
+                        break;
+                }
+            })
+
+            $('#next').click(() => {
+                const index = $('.slide').index($('.active'));
+                const slide = $('.active');
+
+                switch (index) {
+                    case 0:
+                        slide.removeClass('active');
+                        slide.next().addClass('active');
+                        break;
+                    case 1:
+                        slide.removeClass('active');
+                        slide.next().addClass('active');
+                        break;
+                    case 2:
+                        slide.removeClass('active');
+                        $('.slide:first').addClass('active');
+                        break;
+                }
+            })
+
+        })
+    </script>
+</body>
+</html>

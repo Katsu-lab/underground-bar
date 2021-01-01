@@ -1,0 +1,61 @@
+// Reset
+
+* {font-size: 16px; line-height: 1.8em; font-family: sans-serif; color: black; box-sizing: border-box;}
+html, body {margin: 0; padding: 0; overflow-x: hidden;}
+h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0; line-height: 1em;}
+p {margin: 0; padding: 0;}
+a {text-decoration: none;}
+ul {margin: 0; padding: 0}
+li {list-style: none;}
+table {border-collapse: collapse; table-layout: fixed;}
+
+// Style
+
+body {
+    background: rgb(3, 126, 118);
+}
+
+div {
+    text-align: center;
+}
+
+.header {
+    margin: 20px auto;
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+.add {
+    #abox {
+        width: 30%;
+    }
+    #abtn {
+        width: 10%;
+    }
+}
+
+.list {
+
+    ul {
+        text-align: center;
+
+        li {
+            margin: 10px auto;
+            padding: 0 2px 0 10px;
+            text-align: left;
+            display: block;
+            width: 40%;
+            background: white;
+            border-radius: 5px;
+            border: 0;
+
+            span {
+                padding-right: 10px;
+                float: right;
+                display: block;
+            }
+        }
+    }
+}

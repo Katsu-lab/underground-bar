@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Click me!</p>
+    <p>Me too!</p>
+    <p id="enter">Enter mouse here</p>
+
+    Name: <input type="text" name="fullName"><br>
+    Email: <input type="email" name="email"><br>
+
+    <div>Multiple event methods</div>
+
+
+    <script>
+        $(document).ready(function() {
+            // $('p').click(function()  {
+            //     $(this).hide();
+            // })
+
+            $('p').dblclick(function()  {
+                $(this).css('font-size','35px');
+            })
+
+            // $('#enter').mouseenter(function() {
+            //     alert('Entering!');
+            // })
+
+            // $('#enter').mouseleave(function() {
+            //     alert('Bye!');
+            // })
+
+            // $('#enter').mousedown(() => {
+            //     alert('Mouse Down');
+            // })
+
+            // $('#enter').mouseup(() => {
+            //     alert('Mouse Up');
+            // })
+
+            // $('#enter').hover(() => {
+            //     console.log("Enter");
+            // }, () => {
+            //     console.log("Bye");
+            // })
+
+            $('input').focus(() => {
+                $(this).css('background-color','red');
+            })
+
+            $('input').blur(() => {
+                $(this).css('background','blue');
+            })
+
+            $('div').on({
+                click: () => {
+                    $(this).css('background','blue');
+                },
+                dblclick: () => {
+                    $(this).css('background-color','red');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

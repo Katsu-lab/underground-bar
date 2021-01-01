@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="msg">The <b>quick brown</b> fox <i>jumps over</i> the lazy dog.</h1>
+    <h4>Welcome to my Website</h4>
+   Name: <input type="text" id="name"　value="John Doe">
+   <p><a href="https://www.google.com/">Google</a></p>
+
+   <button id="btn1">Get Text</button>
+   <button id="btn2">Get HTML</button>
+   <button id="btn3">Get Value</button>
+   <button id="btn4">Get Attribute Value</button><br>
+
+   <button id="btn5">Set Text</button>
+   <button id="btn6">Set HTML</button>
+   <button id="btn7">Set Value</button>
+   <button id="btn8">Set Attribute Value</button>
+
+    <script>
+        $(document).ready(()=>{
+            $('#btn1').click(() => {
+                alert('Text: ' + $('#msg').text());
+                // alert("Text: ${$('#msg').text()}");
+            });
+
+            $('#btn2').click(() => {
+                alert('HTML: ' + $('#msg').html());
+            });
+
+            $('#btn3').click(() => {
+                alert('Value: ' + $('#name').val());
+            });
+
+            $('#btn4').click(() => {
+                alert('href value: ' + $('h1').attr('id'));
+            });
+
+            $('#btn5').click(() => {
+                $('h1').text('Hi! I changed the text');
+            });
+
+            $('#btn6').click(() => {
+                $('h4').html('<strong>Welcome!</strong>');
+            });
+
+            $('#btn7').click(() => {
+                $('#name').val('Mary Doe');
+            });
+
+            $('#btn8').click(() => {
+                $('a').attr('href','https://jquery.com');
+            });
+        });
+    </script>
+</body>
+</html>

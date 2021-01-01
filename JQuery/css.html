@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .heading-styles {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae asperiores totam nulla veniam culpa voluptatum officia.</p>
+
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus vel ducimus veritatis!</div>
+
+    <button id="btn1">Add Class</button>
+    <button id="btn2">Remove Class</button>
+    <button id="btn3">Toggle Class</button>
+
+    <button id="btn4">Get CSS</button>
+
+    <script>
+        $(document).ready(() => {
+            $('#btn1').click(() => {
+                $('h1, h2, p').addClass('green');
+                $('div').addClass('heading-styles green');
+            })
+
+            $('#btn2').click(() => {
+                $('h1, h2, p').removeClass('green');
+                $('div').removeClass('heading-styles green');
+            })
+
+            $('#btn3').click(() => {
+                $('h1, h2, p').toggleClass('green');
+                $('div').toggleClass('heading-styles green');
+            })
+
+            $('#btn4').click(() => {
+                $('h1, h2').css({
+                    'background': 'pink',
+                    'font-size': '50px',
+                });
+                $('p').css({
+                    'background': 'yellow',
+                    'font-size': '25px',
+                });
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05em;
+}
+
+.options {
+    margin: 10px;
+}
+
+button, li {
+    padding: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.red {
+    background: #ff4136;
+}
+
+.blue {
+    background: #0074d9;
+}
+
+.green {
+    background: #2ecc40;
+}
+
+.all {
+    background: black;
+}
+
+ul {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        width: 49%;
+        list-style-type: none;
+        margin-left: .5%;
+    }
+}

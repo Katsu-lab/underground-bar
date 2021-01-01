@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .container * {
+            display: block;
+            border: 2px solid darkslategray;
+            color: darkslategray;
+            padding: 5px;
+            margin: 15px;
+            background: papayawhip;
+        }
+
+        body {
+            background: peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Traversing
+        <div>div
+            <ul>
+                ul
+                <li>
+                    li
+                    <span class="parent">span
+                        <p>p</p>
+                        <span class="child">span
+                        </span>
+                        <h2>h2</h2>
+                        <h3>h3</h3>
+                        <p>p</p>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(() => {
+            // $('li')
+            // .parent()
+            // .css({color: 'chocolate', border: '2px solid chocolate'});
+
+            // $('li')
+            // .parents()
+            // .css({color: 'red', border: '2px solid red'});
+
+            // $('li')
+            // .parents('div')
+            // .css({color: 'blue', border: '2px solid blue'});
+
+            // $('span')
+            // .parentsUntil('div')
+            // .css({color: 'orange', border: '2px solid orange'});
+
+            // $('span.parent')
+            // .children('p')
+            // .css({color: 'orange', border: '2px solid orange'});
+
+            $('span.child')
+            // .siblings('p')
+            // .next()
+            // .prev()
+            // .nextAll()
+            .nextUntil()
+            .css({color: 'orange', border: '2px solid orange'});
+        })
+    </script>
+</body>
+</html>

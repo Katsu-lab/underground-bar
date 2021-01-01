@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #div1,#div2 {
+            height: 200px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid blue;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <button id="display">Display dimensions of div</button>
+    <button id="set">Set dimensions</button>
+    <script>
+        $(document).ready(() => {
+            $('#display').click(() => {
+                let text = "";
+                text += 'Width of div: ' + $('#div1').width() + '<br>';
+                text += 'Height of div: ' + $('#div1').height() + '<br>';
+                text += 'inner Width of div: ' + $('#div1').innerWidth() + '<br>';
+                text += 'inner Height of div: ' + $('#div1').innerHeight() + '<br>';
+                text += 'outer Width of div: ' + $('#div1').outerWidth() + '<br>';
+                text += 'outer Height of div: ' + $('#div1').outerHeight() + '<br>';
+
+                $('#div1').html(text);
+            })
+
+            $('#set').click(() => {
+                $('#div2')
+                .width('+=500')
+                .height('+=300');
+
+                let text = "";
+                text += 'Width of div: ' + $('#div2').width() + '<br>';
+                text += 'Height of div: ' + $('#div2').height() + '<br>';
+                text += 'inner Width of div: ' + $('#div2').innerWidth() + '<br>';
+                text += 'inner Height of div: ' + $('#div2').innerHeight() + '<br>';
+                text += 'outer Width of div: ' + $('#div2').outerWidth() + '<br>';
+                text += 'outer Height of div: ' + $('#div2').outerHeight() + '<br>';
+
+                $('#div2').html(text);
+            })
+        })
+    </script>
+</body>
+</html>
